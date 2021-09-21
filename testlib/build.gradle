@@ -33,14 +33,17 @@ dependencies {
     implementation "androidx.annotation:annotation:1.2.0"
 }
 
-
+// gradle task: publishToMavenLocal
 project.afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
+                // comment out for jitpack. comment in for local maven repo:
+                /*
                 groupId 'com.github.kai-morich'
                 artifactId 'testlib'
                 version '1.0'
+                */
                 from components.release
                 artifact androidSourcesJar
             }

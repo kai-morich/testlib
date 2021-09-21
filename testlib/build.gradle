@@ -28,6 +28,12 @@ android {
     }
 }
 
+
+dependencies {
+    implementation "androidx.annotation:annotation:1.2.0"
+}
+
+
 project.afterEvaluate {
     publishing {
         publications {
@@ -38,6 +44,12 @@ project.afterEvaluate {
     }
 }
 
-dependencies {
-    implementation "androidx.annotation:annotation:1.2.0"
+task sourcesJar(type: Jar) {
+    classifier 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+artifacts {
+    archives sourcesJar
+    //archives javadocJar
 }

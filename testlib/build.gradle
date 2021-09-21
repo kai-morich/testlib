@@ -39,11 +39,9 @@ project.afterEvaluate {
         publications {
             release(MavenPublication) {
                 // comment out for jitpack. comment in for local maven repo:
-                /*
                 groupId 'com.github.kai-morich'
                 artifactId 'testlib'
-                version '1.0'
-                */
+                version '0.5'
                 from components.release
                 artifact androidSourcesJar
             }

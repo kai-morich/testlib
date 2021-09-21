@@ -28,6 +28,16 @@ android {
     }
 }
 
+project.afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+            }
+        }
+    }
+}
+
 dependencies {
     implementation "androidx.annotation:annotation:1.2.0"
 }

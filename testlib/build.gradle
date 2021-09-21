@@ -38,18 +38,17 @@ project.afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
+                groupId 'com.github.kai-morich'
+                artifactId 'testlib'
+                version '1.0'
                 from components.release
+                artifact androidSourcesJar
             }
         }
     }
 }
 
-task sourcesJar(type: Jar) {
+task androidSourcesJar(type: Jar) {
     classifier 'sources'
     from android.sourceSets.main.java.srcDirs
-}
-
-artifacts {
-    archives sourcesJar
-    //archives javadocJar
 }

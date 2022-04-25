@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    compileSdk 30
+    compileSdk 31
 
     defaultConfig {
         //applicationId "de.kai_morich.testlib"
         minSdk 21
-        targetSdk 30
         versionCode 1
         versionName "1.0"
+        targetSdk 31
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,7 +30,7 @@ android {
 
 
 dependencies {
-    implementation "androidx.annotation:annotation:1.2.0"
+    implementation "androidx.annotation:annotation:1.3.0"
 }
 
 // gradle task: publishToMavenLocal
@@ -42,9 +42,9 @@ project.afterEvaluate {
                 artifact androidSourcesJar
 
                 // relevant for local maven repo, jitpack uses github release:
-                //groupId 'com.github.kai-morich'
-                //artifactId 'testlib'
-                //version '0.5'
+                groupId 'com.github.kai-morich'
+                artifactId 'testlib'
+                version '0.5.1'
             }
         }
     }

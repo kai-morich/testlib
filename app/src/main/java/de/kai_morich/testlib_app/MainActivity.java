@@ -1,9 +1,11 @@
-package de.kai_morich.testlib;
+package de.kai_morich.testlib_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
+
+import de.kai_morich.testlib.Lib;
 
 public class MainActivity extends AppCompatActivity {
 

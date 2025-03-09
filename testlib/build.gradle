@@ -9,8 +9,6 @@ android {
     defaultConfig {
         namespace "de.kai_morich.testlib"
         minSdk 21
-        versionCode 1
-        versionName "1.0"
         targetSdk 31
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
